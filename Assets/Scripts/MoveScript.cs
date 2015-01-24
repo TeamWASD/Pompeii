@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -12,6 +12,7 @@ public class MoveScript : MonoBehaviour
 	/// </summary>
 	public Vector2 speed = new Vector2(50, 50);
 
+    GameObject collisionObj;
     private bool rockCollision = false;
     private int rockCount = 0;
 	
@@ -24,11 +25,13 @@ public class MoveScript : MonoBehaviour
 		float inputX = Input.GetAxis("Horizontal");
 		float inputY = Input.GetAxis("Vertical");
 
-	    if (Input.GetKeyDown("space") && rockCollision)
+        Debug.Log("Rocks: " + rockCount);
+
+        if (collisionObj != null && Input.GetKeyDown("space") && collisionObj.gameObject.tag.Equals("Rock"))
 	    {
-	        rockCollision = false;
+	        Destroy(collisionObj);
 	        rockCount++;
-            Debug.Log("Rocks: " + rockCount);
+	        collisionObj = null;
 	    }
 		
 		// 4 - Movement per direction
@@ -46,9 +49,14 @@ public class MoveScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D otherCollider)
     {
-        if (otherCollider.gameObject.name.Equals("Rock"))
+        if (otherCollider.gameObject.tag.Equals("Rock"))
         {
-            rockCollision = true;
+            collisionObj = otherCollider.gameObject;
         }
+    }
+
+    void OnTriggerExit2D(Collider2D otherCollider)
+    {
+        collisionObj = null;
     }
 }
