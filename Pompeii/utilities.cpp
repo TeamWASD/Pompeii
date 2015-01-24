@@ -1,9 +1,9 @@
 //
 //  utilities.cpp
-//  DinoDodge
+//  Pompeii
 //
-//  Created by Lewis Fox on 11/20/14.
-//  Copyright (c) 2014 LRFLEW. All rights reserved.
+//  Created by Team WASD on 1/23/15.
+//  Copyright (c) 2015 Team WASD. All rights reserved.
 //
 
 #include "utilities.h"

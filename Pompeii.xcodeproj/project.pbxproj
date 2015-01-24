@@ -53,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				983967611A7345BA008E8CB9 /* Pompeii */,
+				983967621A7345BA008E8CB9 /* PompeiiMac */,
 				983967601A7345BA008E8CB9 /* Products */,
 				983967821A734609008E8CB9 /* SDL2.framework */,
 			);
@@ -72,17 +73,17 @@
 				9870D7AF1A734C2A00BCCCF6 /* main.cpp */,
 				9870D7B01A734C2A00BCCCF6 /* utilities.cpp */,
 				9870D7B11A734C2A00BCCCF6 /* utilities.h */,
-				983967621A7345BA008E8CB9 /* Supporting Files */,
 			);
 			path = Pompeii;
 			sourceTree = "<group>";
 		};
-		983967621A7345BA008E8CB9 /* Supporting Files */ = {
+		983967621A7345BA008E8CB9 /* PompeiiMac */ = {
 			isa = PBXGroup;
 			children = (
 				98AFB5FF1A735822003AAC5C /* Info.plist */,
 			);
-			name = "Supporting Files";
+			name = PompeiiMac;
+			path = Pompeii;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,7 +249,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = Pompeii/Info.plist;
+				INFOPLIST_FILE = PompeiiMac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -262,7 +263,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = Pompeii/Info.plist;
+				INFOPLIST_FILE = PompeiiMac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

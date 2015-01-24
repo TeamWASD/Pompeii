@@ -1,9 +1,9 @@
 //
 //  main.cpp
-//  GLTest
+//  Pompeii
 //
-//  Created by Lewis Fox on 1/5/15.
-//  Copyright (c) 2015 LRFLEW. All rights reserved.
+//  Created by Team WASD on 1/23/15.
+//  Copyright (c) 2015 Team WASD. All rights reserved.
 //
 
 #include "utilities.h"
