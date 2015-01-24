@@ -3,7 +3,22 @@ using System.Collections;
 
 public class Inventory : MonoBehaviour {
 
-	public int rockCount = 0;
+	private int rockCount = 0;
+	public int RockCount
+	{
+		get{ return rockCount;}
+		set {
+			if (rockCount < value) {
+				for(; rockCount < value; ++rockCount) {
+					GameObject.Find("Star" + (1 + rockCount)).renderer.enabled = true;
+				}
+			} else {
+				for(; rockCount > value; --rockCount) {
+					GameObject.Find("Star" + (rockCount)).renderer.enabled = false;
+				}
+			}
+		}
+	}
 
 	// Use this for initialization
 	void Start () {
@@ -14,4 +29,6 @@ public class Inventory : MonoBehaviour {
 	void Update () {
 	
 	}
+
+
 }

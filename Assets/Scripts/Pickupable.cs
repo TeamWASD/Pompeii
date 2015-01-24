@@ -13,9 +13,9 @@ public class Pickupable : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (collision && Input.GetKeyDown("space"))
+		if (collision && Input.GetKeyDown("space") && inventory.RockCount < 5)
 		{
-			inventory.rockCount++;
+			inventory.RockCount++;
 			collision = false;
 			Destroy(gameObject);
 		}
