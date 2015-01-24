@@ -13,7 +13,7 @@ public class MoveScript : MonoBehaviour
 	public Vector2 speed = new Vector2(50, 50);
 
     private bool rockCollision = false;
-    private int rockCount = 0;
+    private bool hasRock = false;
 	
 	// 2 - Store the movement
 	private Vector2 movement;
@@ -24,11 +24,11 @@ public class MoveScript : MonoBehaviour
 		float inputX = Input.GetAxis("Horizontal");
 		float inputY = Input.GetAxis("Vertical");
 
-	    if (Input.GetKeyDown("space") && rockCollision)
+	    if (Input.GetKeyDown("space") && rockCollision && (!hasRock))
 	    {
 	        rockCollision = false;
-	        rockCount++;
-            Debug.Log("Rocks: " + rockCount);
+	        hasRock = true;
+            Debug.Log("You picked up a rock.");
 	    }
 		
 		// 4 - Movement per direction
