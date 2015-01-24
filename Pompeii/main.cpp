@@ -13,7 +13,7 @@ int main(int argc, char *argv[]) {
     if (SDL_Init(SDL_INIT_EVERYTHING)) logAndCrashSDL("SDL_Init");
     SDL_LogSetAllPriority(SDL_LOG_PRIORITY_VERBOSE);
     
-    SDL_Window *win = SDL_CreateWindow("GLTest", 0, 0, 640, 480, 0);
+    SDL_Window *win = SDL_CreateWindow("Pompeii", 0, 0, 640, 480, 0);
     if (win == NULL) logAndCrashSDL("SDL_CreateWindow");
     
     bool run = true;

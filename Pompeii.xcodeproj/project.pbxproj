@@ -10,15 +10,30 @@
 		983967831A734609008E8CB9 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 983967821A734609008E8CB9 /* SDL2.framework */; };
 		9870D7B21A734C2A00BCCCF6 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9870D7AF1A734C2A00BCCCF6 /* main.cpp */; };
 		9870D7B31A734C2A00BCCCF6 /* utilities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9870D7B01A734C2A00BCCCF6 /* utilities.cpp */; };
+		98AFB5FB1A7350DA003AAC5C /* SDL2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 983967821A734609008E8CB9 /* SDL2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		98AFB5FC1A7350DA003AAC5C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				98AFB5FB1A7350DA003AAC5C /* SDL2.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9839675F1A7345BA008E8CB9 /* Pompeii.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pompeii.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		983967821A734609008E8CB9 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDL2.framework; sourceTree = "<group>"; };
-		983967861A734725008E8CB9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9870D7AF1A734C2A00BCCCF6 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		9870D7B01A734C2A00BCCCF6 /* utilities.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = utilities.cpp; sourceTree = "<group>"; };
 		9870D7B11A734C2A00BCCCF6 /* utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utilities.h; sourceTree = "<group>"; };
+		98AFB5F81A7350CE003AAC5C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +79,7 @@
 		983967621A7345BA008E8CB9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				983967861A734725008E8CB9 /* Info.plist */,
+				98AFB5F81A7350CE003AAC5C /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -79,6 +94,7 @@
 				9839675B1A7345BA008E8CB9 /* Sources */,
 				9839675C1A7345BA008E8CB9 /* Frameworks */,
 				9839675D1A7345BA008E8CB9 /* Resources */,
+				98AFB5FC1A7350DA003AAC5C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
