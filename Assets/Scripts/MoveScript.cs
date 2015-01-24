@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections;
+using UnityEngine;
 
 /// <summary>
 /// Player controller and behavior
@@ -9,6 +11,9 @@ public class MoveScript : MonoBehaviour
 	/// 1 - The speed of the ship
 	/// </summary>
 	public Vector2 speed = new Vector2(50, 50);
+
+    private bool rockCollision = false;
+    private int rockCount = 0;
 	
 	// 2 - Store the movement
 	private Vector2 movement;
@@ -18,6 +23,13 @@ public class MoveScript : MonoBehaviour
 		// 3 - Retrieve axis information
 		float inputX = Input.GetAxis("Horizontal");
 		float inputY = Input.GetAxis("Vertical");
+
+	    if (Input.GetKeyDown("space") && rockCollision)
+	    {
+	        rockCollision = false;
+	        rockCount++;
+            Debug.Log("Rocks: " + rockCount);
+	    }
 		
 		// 4 - Movement per direction
 		movement = new Vector2(
@@ -31,4 +43,12 @@ public class MoveScript : MonoBehaviour
 		// 5 - Move the game object
 		rigidbody2D.velocity = movement;
 	}
+
+    void OnTriggerEnter2D(Collider2D otherCollider)
+    {
+        if (otherCollider.gameObject.name.Equals("Rock"))
+        {
+            rockCollision = true;
+        }
+    }
 }
