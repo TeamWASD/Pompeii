@@ -8,7 +8,6 @@ public class CameraFollow : MonoBehaviour {
 	private float topBound;
 	private float bottomBound;
 
-	private Transform target;
 	private Transform follow;
 
 	// Use this for initialization
@@ -16,8 +15,7 @@ public class CameraFollow : MonoBehaviour {
 		float vertExtent = Camera.main.camera.orthographicSize;  
 		float horzExtent = vertExtent * Screen.width / Screen.height;
 
-		target = GameObject.Find("Main Camera").transform;
-		follow = GameObject.Find("Player").transform;
+		follow = GameObject.FindWithTag("Player").transform;
 
 		Renderer background = GameObject.Find("Background").renderer;
 
@@ -32,6 +30,6 @@ public class CameraFollow : MonoBehaviour {
 		var pos = new Vector3(follow.position.x, follow.position.y, -10);
 		pos.x = Mathf.Clamp(pos.x, leftBound, rightBound);
 		pos.y = Mathf.Clamp(pos.y, bottomBound, topBound);
-		target.position = pos;
+		this.transform.position = pos;
 	}
 }
