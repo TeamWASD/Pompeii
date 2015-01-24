@@ -4,5 +4,8 @@ Temp
 Assembly-CSharp-vs.csproj
 Assembly-CSharp.csproj
 Pompeii-csharp.sln
+Pompeii-csharp.v12.suo
 Pompeii.sln
 Pompeii.userprefs
+
+obj
