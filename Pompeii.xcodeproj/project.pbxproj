@@ -11,7 +11,6 @@
 		9870D7B21A734C2A00BCCCF6 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9870D7AF1A734C2A00BCCCF6 /* main.cpp */; };
 		9870D7B31A734C2A00BCCCF6 /* utilities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9870D7B01A734C2A00BCCCF6 /* utilities.cpp */; };
 		98AFB5FB1A7350DA003AAC5C /* SDL2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 983967821A734609008E8CB9 /* SDL2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		98AFB6001A735822003AAC5C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 98AFB5FF1A735822003AAC5C /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -144,7 +143,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98AFB6001A735822003AAC5C /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
