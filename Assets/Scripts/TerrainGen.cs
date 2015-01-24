@@ -11,7 +11,7 @@ public class TerrainGen : MonoBehaviour
 
 	void Start () {
 		for (int i=0; i < RockCount; ++i) {
-			Vector3 pos = new Vector3(Random.Range(-50,50), Random.Range (-50,50), 0);
+			Vector3 pos = new Vector3(Random.value * 100.0f - 50.0f, Random.value * 100.0f - 50.0f, 0);
 			Instantiate(Rock, pos, Quaternion.identity);
 		}
 
