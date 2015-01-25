@@ -7,11 +7,6 @@ public class LavaScript : MonoBehaviour {
 	public float deltaFactor = 0.2f, Cooldown = 1.0f;
 	private float t = 0.0f, _cooldown = 0.0f;
 	private bool grow = true, collision = false;
-
-	// Use this for initialization
-	void Start () {
-	
-	}
 	
 	// Update is called once per frame
 	void Update () {
