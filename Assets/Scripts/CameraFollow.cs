@@ -17,7 +17,7 @@ public class CameraFollow : MonoBehaviour {
 
 		follow = GameObject.FindWithTag("Player").transform;
 
-		Renderer background = GameObject.Find("Background").renderer;
+		Renderer background = GameObject.FindWithTag("Background").renderer;
 
 		leftBound = (float)(background.bounds.min.x + horzExtent);
 		rightBound = (float)(background.bounds.max.x - horzExtent);

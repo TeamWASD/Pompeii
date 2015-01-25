@@ -28,7 +28,7 @@ public class HouseScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (collision && Input.GetKeyDown("space"))
+		if (collision && Input.GetButtonDown("Use"))
 		{
 			Trigger ();
 		}

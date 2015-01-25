@@ -13,7 +13,7 @@ public class Workable : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (collision && Input.GetKeyDown("space") && inventory.RockCount > 0 && inventory.BrickCount < 5)
+        if (collision && Input.GetButtonDown("Use") && inventory.RockCount > 0 && inventory.BrickCount < 5)
         {
             inventory.RockCount--;
             inventory.BrickCount++;
