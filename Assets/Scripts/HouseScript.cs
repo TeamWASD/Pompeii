@@ -20,6 +20,7 @@ public class HouseScript : MonoBehaviour {
 	void Start () {
 		maxHeight = transform.localScale.y;
 		yCenter = transform.localPosition.y;
+		Debug.Log (yCenter);
 
 		inventory = GameObject.FindWithTag("Player").GetComponent<Inventory>();
 		material = gameObject.renderer.material;
@@ -64,9 +65,9 @@ public class HouseScript : MonoBehaviour {
 	}
 
 	void UpdateCrop() {
-		float scale = (float) built / filled;
+		float scale = (float) built / filled, cord = maxHeight / 2.0f;
 		material.mainTextureScale = new Vector2(material.mainTextureScale.x, scale);
 		transform.localScale = new Vector3(transform.localScale.x, scale * maxHeight, transform.localScale.z);
-		transform.localPosition = new Vector3(transform.localPosition.x, (scale * maxHeight / 2.0f) + yCenter, transform.localPosition.z);
+		transform.localPosition = new Vector3(transform.localPosition.x, yCenter + (scale * cord) - cord, transform.localPosition.z);
 	}
 }
