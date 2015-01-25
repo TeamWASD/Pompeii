@@ -4,9 +4,9 @@ using System.Collections;
 public class LavaScript : MonoBehaviour {
 
 	public Vector2 startSize, endSize;
-	public float deltaFactor = 0.2f;
-	private float t = 0.0f;
-	private bool grow = true;
+	public float deltaFactor = 0.2f, Cooldown = 1.0f;
+	private float t = 0.0f, _cooldown = 0.0f;
+	private bool grow = true, collision = false;
 
 	// Use this for initialization
 	void Start () {
@@ -30,10 +30,41 @@ public class LavaScript : MonoBehaviour {
 	}
 
 	void FixedUpdate () {
-
+		if (_cooldown > 0.0f) {
+			_cooldown -= Time.fixedDeltaTime;
+			if (_cooldown < 0.0f) _cooldown = 0.0f;
+		}
+		if (collision && _cooldown == 0.0f) {
+			GameObject player = GameObject.FindWithTag("Player");
+			Inventory inventory = player.GetComponent<Inventory>();
+			if (inventory.RockCount > 0) {
+				if (inventory.BrickCount > 0) {
+					if (Random.Range(0, 1) == 1)
+						--inventory.BrickCount;
+					else
+						--inventory.RockCount;
+				} else
+					--inventory.RockCount;
+			} else if (inventory.BrickCount > 0)
+				--inventory.BrickCount;
+			else
+				Application.LoadLevel("LoseScene");
+			_cooldown = Cooldown;
+		}
 	}
 
 	float QuadLerp (float a1, float a2, float t) {
 		return Mathf.Sqrt ((a2 * a2 * t) + (a1 * a1 * (1.0f - t)));
 	}
+
+	void OnTriggerEnter2D(Collider2D otherCollider)
+	{
+		if (otherCollider.gameObject.tag.Equals("Player")) collision = true;
+	}
+	
+	void OnTriggerExit2D(Collider2D otherCollider)
+	{
+		if (otherCollider.gameObject.tag.Equals("Player")) collision = false;
+	}
+
 }
