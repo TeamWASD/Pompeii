@@ -10,6 +10,7 @@ public class HouseScript : MonoBehaviour {
 	private int built = 1;
 
 	public float maxHeight = 1.79f;
+	public float yCenter = 0.0f;
 	public int filled = 10;
 	public float openDelay = 1.0f;
 	public Material open;
@@ -62,6 +63,6 @@ public class HouseScript : MonoBehaviour {
 		float scale = (float) built / filled;
 		material.mainTextureScale = new Vector2(material.mainTextureScale.x, scale);
 		transform.localScale = new Vector3(transform.localScale.x, scale * maxHeight, transform.localScale.z);
-		transform.localPosition = new Vector3(transform.localPosition.x, scale * maxHeight / 2.0f, transform.localPosition.z);
+		transform.localPosition = new Vector3(transform.localPosition.x, (scale * maxHeight / 2.0f) + yCenter, transform.localPosition.z);
 	}
 }
