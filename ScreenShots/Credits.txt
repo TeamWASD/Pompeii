@@ -25,3 +25,6 @@ Kris Douglass
 Testers:
 David Chan
 Chris GauthierDickey
+
+Audio:
+William Thrussel
