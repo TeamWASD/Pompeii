@@ -7,7 +7,7 @@ public class HouseScript : MonoBehaviour {
 	private Inventory inventory;
 
 	private Material material;
-	private int built = 1;
+	private int built = 0;
 
 	private float maxHeight;
 	private float yCenter;
