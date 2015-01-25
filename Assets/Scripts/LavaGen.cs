@@ -7,7 +7,7 @@ public class LavaGen : MonoBehaviour
     public float Lambda, TimerDecrement;
     private float _timer;
     public Transform Lava;
-    public int Radius;
+    public int Radius = 15.0f;
 
     // Use this for initialization
     void Start()
