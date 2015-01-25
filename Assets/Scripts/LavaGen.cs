@@ -26,7 +26,6 @@ public class LavaGen : MonoBehaviour
         Timer -= 1.0f;
         while (Timer <= 0)
         {
-            Debug.Log("Spawning a lava lake");
             Vector3 pos;
             do
             {
@@ -36,8 +35,8 @@ public class LavaGen : MonoBehaviour
             float u = Random.value;
             do {
                 u = Random.value;
-			} while (u == 1.0f);
-            Timer += Mathf.Log(1 - u) * Lambda * -1;
+			} while (u == 0.0f);
+            Timer += -Mathf.Log(u) * Lambda;
         }
     }
 }
