@@ -5,7 +5,7 @@ using System.Collections;
 public class TerrainGen : MonoBehaviour
 {
 
-	public int RockCount = 100;
+	public int RockCount = 100, Radius;
 	public Transform Rock;
 
 	// Use this for initialization
@@ -15,7 +15,7 @@ public class TerrainGen : MonoBehaviour
 			Vector3 pos;
 			do {
 				pos = new Vector3(UnityEngine.Random.value * 100.0f - 50.0f, UnityEngine.Random.value * 100.0f - 50.0f, 0);   
-			} while (Math.Sqrt((Math.Abs(pos.x) * Math.Abs(pos.x)) + (Math.Abs(pos.y) * Math.Abs(pos.y))) < 15);
+			} while (Mathf.Sqrt((Mathf.Abs(pos.x) * Mathf.Abs(pos.x)) + (Mathf.Abs(pos.y) * Mathf.Abs(pos.y))) < Radius);
 			Instantiate(Rock, pos, Quaternion.identity);
 		}
 
