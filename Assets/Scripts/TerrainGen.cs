@@ -5,7 +5,8 @@ using System.Collections;
 public class TerrainGen : MonoBehaviour
 {
 
-	public int RockCount = 100, Radius = 15.0f;
+	public int RockCount = 100;
+	public float Radius = 15.0f;
 	public Transform Rock;
 
 	// Use this for initialization
