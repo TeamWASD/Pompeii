@@ -20,7 +20,6 @@ public class HouseScript : MonoBehaviour {
 	void Start () {
 		maxHeight = transform.localScale.y;
 		yCenter = transform.localPosition.y;
-		Debug.Log (yCenter);
 
 		inventory = GameObject.FindWithTag("Player").GetComponent<Inventory>();
 		material = gameObject.renderer.material;
@@ -31,22 +30,26 @@ public class HouseScript : MonoBehaviour {
 	void Update () {
 		if (collision && Input.GetKeyDown("space"))
 		{
-			if (built < filled && inventory.BrickCount > 0) {
-				--inventory.BrickCount;
-				++built;
-				UpdateCrop();
-			} else if (openDelay == 0.0f) {
-				Application.LoadLevel("WinScene");
+			Trigger ();
+		}
+		if (built >= filled && openDelay > 0.0f) {
+			openDelay -= Time.deltaTime;
+			if (openDelay <= 0.0f) {
+				openDelay = 0.0f;
+				renderer.material = open;
 			}
 		}
 	}
 
-	void FixedUpdate () {
-		if (built >= filled && openDelay > 0.0f) {
-			openDelay -= Time.fixedDeltaTime;
-			if (openDelay <= 0.0f) {
-				openDelay = 0.0f;
-				renderer.material = open;
+	public void Trigger ()
+	{
+		if (built < filled && inventory.BrickCount > 0) {
+			--inventory.BrickCount;
+			++built;
+			UpdateCrop ();
+		} else {
+			if (openDelay == 0.0f) {
+								Application.LoadLevel ("WinScene");
 			}
 		}
 	}

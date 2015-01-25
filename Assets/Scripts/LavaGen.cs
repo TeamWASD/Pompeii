@@ -9,18 +9,6 @@ public class LavaGen : MonoBehaviour
     public Transform Lava;
     public float Radius = 15.0f;
 
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     void FixedUpdate()
     {
         Timer -= Time.fixedDeltaTime;
