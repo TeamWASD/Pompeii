@@ -50,6 +50,7 @@ public class LavaScript : MonoBehaviour {
 			else
 				Application.LoadLevel("LoseScene");
 			_cooldown = Cooldown;
+			inventory.Cooldown = _cooldown;
 		}
 	}
 
