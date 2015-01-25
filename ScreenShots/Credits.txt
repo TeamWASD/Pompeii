@@ -4,8 +4,13 @@ Kris Douglass
 Lewis Fox
 Nathan Saslavsky
 
-Lava sprite: rh0
-Rock sprite: phaelax
+Lava Sprite:
+OpenGameArt.org user rh0
+CC0 1.0
+
+Rock Sprite:
+OpenGameArt.org user phaelax
+CC-BY-SA 3.0
 
 Art: 
 Anna X Sun
