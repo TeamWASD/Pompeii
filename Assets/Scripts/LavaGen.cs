@@ -4,8 +4,8 @@ using System.Collections;
 
 public class LavaGen : MonoBehaviour
 {
-    public float Lambda = 50.0f;
-    public float Timer = 500.0f;
+    public float Lambda = 1.0f;
+    public float Timer = 10.0f;
     public Transform Lava;
     public float Radius = 15.0f;
 
@@ -23,7 +23,7 @@ public class LavaGen : MonoBehaviour
 
     void FixedUpdate()
     {
-        Timer -= 1.0f;
+        Timer -= Time.fixedDeltaTime;
         while (Timer <= 0)
         {
             Vector3 pos;
