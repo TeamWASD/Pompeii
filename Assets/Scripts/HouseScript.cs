@@ -35,7 +35,7 @@ public class HouseScript : MonoBehaviour {
 				++built;
 				UpdateCrop();
 			} else if (openDelay == 0.0f) {
-				// Load Win Screen
+				Application.LoadLevel("WinScene");
 			}
 		}
 	}
