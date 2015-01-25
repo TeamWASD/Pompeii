@@ -9,4 +9,8 @@ public class Button : MonoBehaviour {
 		Application.LoadLevel(SceneName);
 	}
 
+	public void Quit() {
+		Application.Quit ();
+	}
+
 }
