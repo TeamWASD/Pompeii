@@ -1,26 +1,14 @@
-People to Credit: 
-
-
-Core-Designers:
+Team WASD:
 Charlie Strong
 Kris Douglass
 Lewis Fox
 Nathan Saslavsky
-
 
 Credit Lava and Rock:
 
-Artist: 
+Art: 
 Anna X Sun
-Charlie Strong
-Kris Douglass
 Steph Murphy
-
-Programmers:
-Lewis Fox
-Nathan Saslavsky
-Charlie Strong
-Kris Douglass
 
 Testers:
 David Chan
