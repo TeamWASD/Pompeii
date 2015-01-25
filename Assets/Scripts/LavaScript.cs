@@ -4,7 +4,7 @@ using System.Collections;
 public class LavaScript : MonoBehaviour {
 
 	public Vector2 startSize, endSize;
-	public float deltaT;
+	public float deltaFactor = 0.2f;
 	private float t = 0.0f;
 	private bool grow = true;
 
@@ -15,22 +15,22 @@ public class LavaScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
-	}
-
-	void FixedUpdate () {
 		if (grow) {
+			t += Time.deltaTime * deltaFactor;
+			if (t >= 1.0f) {
+				t = 1.0f;
+				grow = false;
+			}
 			Vector2 scale = new Vector2 (
 				QuadLerp (startSize.x, endSize.x, t),
 				QuadLerp (startSize.y, endSize.y, t)
-						);
+				);
 			transform.localScale = scale;
-			t += deltaT;
-			if (t >= 1.0f) {
-					t = 1.0f;
-					grow = false;
-			}
 		}
+	}
+
+	void FixedUpdate () {
+
 	}
 
 	float QuadLerp (float a1, float a2, float t) {
