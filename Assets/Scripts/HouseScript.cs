@@ -11,6 +11,8 @@ public class HouseScript : MonoBehaviour {
 
 	public float maxHeight = 1.79f;
 	public int filled = 10;
+	public float openDelay = 1.0f;
+	public Material open;
 	
 	// Use this for initialization
 	void Start () {
@@ -21,11 +23,25 @@ public class HouseScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (collision && built < filled && Input.GetKeyDown("space") && inventory.BrickCount > 0)
+		if (collision && Input.GetKeyDown("space"))
 		{
-			--inventory.BrickCount;
-			++built;
-			UpdateCrop();
+			if (built < filled && inventory.BrickCount > 0) {
+				--inventory.BrickCount;
+				++built;
+				UpdateCrop();
+			} else if (openDelay == 0.0f) {
+				// Load Win Screen
+			}
+		}
+	}
+
+	void FixedUpdate () {
+		if (built >= filled && openDelay > 0.0f) {
+			openDelay -= Time.fixedDeltaTime;
+			if (openDelay <= 0.0f) {
+				openDelay = 0.0f;
+				renderer.material = open;
+			}
 		}
 	}
 	
