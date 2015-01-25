@@ -9,14 +9,18 @@ public class HouseScript : MonoBehaviour {
 	private Material material;
 	private int built = 1;
 
-	public float maxHeight = 1.79f;
-	public float yCenter = 0.0f;
+	private float maxHeight;
+	private float yCenter;
+
 	public int filled = 10;
 	public float openDelay = 1.0f;
 	public Material open;
 	
 	// Use this for initialization
 	void Start () {
+		maxHeight = transform.localScale.y;
+		yCenter = transform.localPosition.y;
+
 		inventory = GameObject.FindWithTag("Player").GetComponent<Inventory>();
 		material = gameObject.renderer.material;
 		UpdateCrop();
