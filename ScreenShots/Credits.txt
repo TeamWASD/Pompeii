@@ -4,7 +4,8 @@ Kris Douglass
 Lewis Fox
 Nathan Saslavsky
 
-Credit Lava and Rock:
+Lava sprite: rh0
+Rock sprite: phaelax
 
 Art: 
 Anna X Sun
