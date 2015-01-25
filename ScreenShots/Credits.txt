@@ -1,0 +1,27 @@
+People to Credit: 
+
+
+Core-Designers:
+Charlie Strong
+Kris Douglass
+Lewis Fox
+Nathan Saslavsky
+
+
+Credit Lava and Rock:
+
+Artist: 
+Anna X Sun
+Charlie Strong
+Kris Douglass
+Steph Murphy
+
+Programmers:
+Lewis Fox
+Nathan Saslavsky
+Charlie Strong
+Kris Douglass
+
+Testers:
+David Chan
+Chris GauthierDickey
