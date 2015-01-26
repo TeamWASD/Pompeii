@@ -34,7 +34,7 @@ public class LavaScript : MonoBehaviour {
 			Inventory inventory = player.GetComponent<Inventory>();
 			if (inventory.RockCount > 0) {
 				if (inventory.BrickCount > 0) {
-					if (Random.Range(0, 1) == 1)
+					if (Random.Range(0, 2) == 1)
 						--inventory.BrickCount;
 					else
 						--inventory.RockCount;
